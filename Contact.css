@@ -1,0 +1,218 @@
+﻿html {
+}
+
+body {
+    margin: 0 0 0 0;
+    background-image: url("Images/background-img-2.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+    left: 0;
+}
+
+p, li {
+    font-family: 'Calisto MT';
+    font-size: 20px;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    border-bottom: thick solid rgb(67,92,192); /* blue */
+    background-color: #cbcdcd; /* light grey */
+    z-index: 8;
+}
+
+    header .center {
+        position: relative;
+        height: 100px;
+        top: 0;
+        left: 0
+    }
+
+    header a.logo {
+        position: relative;
+        display: block;
+        float: left;
+        width: 222px;
+        height: 60px;
+        margin: 0 35px 0 0;
+    }
+
+        header a.logo .logo_img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 75px;
+            width: 75px;
+        }
+
+        header a.logo .text1 {
+            position: absolute;
+            left: 150px;
+            top: 0;
+            color: black;
+            font-family: 'Calisto MT';
+        }
+
+        header a.logo .text2 {
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            color: black;
+            font-family: 'Calisto MT';
+        }
+
+section.project-covers {
+    position: relative;
+    top: 100px;
+}
+
+/*
+    Header          ^^^^
+
+    Main      vvvv
+*/
+
+section.contact {
+    position: fixed;
+    /*top: 50%;*/
+    /*margin-top: -250px;*/
+    left: 10%;
+    width: 80%;
+    background-color: aqua;
+}
+
+    section.contact > div.info-group {
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        /*margin-top: -250px;*/
+        height: 60%;
+        width: 80%;
+        background-color: rgb(0, 196, 107); /* green */
+    }
+
+        section.contact > div.info-group > div.heading {
+            margin-bottom: 25px;
+        }
+
+            section.contact > div.info-group > div.heading > h1 {
+                margin-left: 25%;
+                font-family: 'Calisto MT';
+                color: black;
+            }
+
+        section.contact > div.info-group > div.info {
+            position: relative;
+            bottom: 20px;
+        }
+
+            section.contact > div.info-group > div.info > p {
+                margin-left: 10%;
+                font-family: 'Calisto MT';
+                color: black;
+            }
+
+                section.contact > div.info-group > div.info > p > span.right {
+                    margin-left: 25%;
+                }
+
+    section.contact > div.headshot > img {
+        position: fixed;
+        height: 400px;
+        right: 20%;
+        top: 50%;
+        margin-top: -200px;
+    }
+
+/*
+    Main    ^^^^
+    
+    Footer  vvvv
+*/
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #cbcdcd; /* light grey */
+    border-top: thick solid rgb(67,92,192); /* blue */
+}
+
+nav #menu {
+    float: right;
+    height: 90px;
+}
+
+#menu > ul {
+    height: 50px;
+}
+
+    #menu > ul > li {
+        float: left;
+        margin: 0 50px 0 0;
+        font-family: 'Calisto MT';
+    }
+
+        #menu > ul > li > a {
+            height: 14px;
+            padding: 20px 10px;
+            text-transform: uppercase;
+        }
+
+ul.list {
+    position: fixed;
+    top: 1%;
+    left: 60%;
+    width: 45%;
+    font-family: 'Calisto MT';
+}
+
+    ul.list > li a {
+        position: relative;
+        display: block;
+        color: #2a2a2a;
+        font: normal 14px 'HNBD';
+        line-height: 14px;
+        z-index: 0;
+    }
+
+div.social_media {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    left: 75%;
+    top: 20px;
+}
+
+    div.social_media > a > img {
+        margin-right: 35px;
+    }
+
+        div.social_media > a > img.linkedin_logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        div.social_media > a > img.github_logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        div.social_media > a > img.instagram_logo {
+            width: 35px;
+            height: 35px;
+        }
+
+        div.social_media > a > img.facebook_logo {
+            width: 32.5px;
+            height: 32.5px;
+        }

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h1>Axe Man</h1>
+  <p>Slowly drag the lumber jack towards the tree to chop it down.</p>
+  <canvas id="myCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
+  <br/>
+  <input id="slider" type="range" min="0" max="100" />
+</body>
+  <script> "use strict"
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var slider = document.getElementById('slider');
+    slider.value = 0;
+    var swingCount = 0;
+    
+    function drawFigure() {
+      var dx = slider.value;
+      
+      //head
+      context.beginPath();
+      context.rect(dx,70,40,40);
+      context.fillStyle = "bisque";
+      context.fill();
+      
+      //eye
+      context.save();
+      context.translate(30,0);
+      context.beginPath();
+      context.rect(dx,80,7,4);
+      context.fillStyle = "black";
+      context.fill();
+      context.restore();
+      
+      //mouth
+      context.save();
+      context.translate(27,0);
+      context.beginPath();
+      context.rect(dx,100,13,4);
+      context.fillStyle = "black";
+      context.fill();
+      context.restore();
+      
+      //hair part1
+      context.beginPath();
+      context.rect(dx,65,15,45);
+      context.fillStyle = "brown";
+      context.fill();
+      
+      //hair part2
+      context.beginPath();
+      context.rect(dx,65,40,10);
+      context.fillStyle = "brown";
+      context.fill();
+      
+      //body
+      context.save();
+      context.translate(10,0);
+      context.beginPath();
+      context.rect(dx,110,20,40);
+      context.fillStyle = "red";
+      context.fill();
+      context.restore();
+      
+      //legs
+      context.save();
+      context.translate(10,0);
+      context.beginPath();
+      context.rect(dx,150,20,40);
+      context.fillStyle = "blue";
+      context.fill();
+      context.restore();
+      
+      //feet
+      context.save();
+      context.translate(10,0);
+      context.beginPath();
+      context.rect(dx,190,30,10);
+      context.fillStyle = "brown";
+      context.fill();
+      context.restore();
+    }
+    
+    function drawArm() {
+      var dx = slider.value;
+      
+      // axe handle
+      context.save();
+      context.translate(25,0);
+      context.beginPath();
+      context.rect(dx,140,60,5);
+      context.fillStyle = "brown";
+      context.fill();
+      context.restore();
+      
+      // axe head
+      context.save();
+      context.translate(80,0);
+      context.beginPath();
+      context.rect(dx,140,20,30);
+      context.fillStyle = "grey";
+      context.fill();
+      context.restore();
+      
+      // swinging arm
+      context.save();
+      context.translate(35,0);
+      context.beginPath();
+      context.rect(dx,100,15,45);
+      context.fillStyle = "red";
+      context.fill();
+      context.restore();
+    }
+    
+    function drawFullTree() {
+      context.save();
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,0);
+      context.lineTo(175,0);
+      context.lineTo(225,0);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+      context.restore();
+    }
+    
+    function drawPartChoppedTree() {
+      context.save();
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,140);
+      context.lineTo(145,135);
+      context.lineTo(135,130);
+      context.lineTo(135,0);
+      context.lineTo(175,0);
+      context.lineTo(225,0);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+      context.restore();
+    }
+    
+    function drawQuarterChoppedTree() {
+      context.save();
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,142.5);
+      context.lineTo(165,135);
+      context.lineTo(135,127.5);
+      context.lineTo(135,0);
+      context.lineTo(175,0);
+      context.lineTo(225,0);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+      context.restore();
+    }
+    
+    function drawHalfChoppedTree() {
+      context.save();
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,145);
+      context.lineTo(180,135);
+      context.lineTo(135,125);
+      context.lineTo(135,0);
+      context.lineTo(175,0);
+      context.lineTo(225,0);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+      context.restore();
+    }
+    
+    function drawAlmostChoppedTree() {
+      context.save();
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,150);
+      context.lineTo(200,135);
+      context.lineTo(135,120);
+      context.lineTo(135,0);
+      context.lineTo(175,0);
+      context.lineTo(225,0);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+      context.restore();
+    }
+    
+    function bottomTree() {
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(105,200);
+      context.lineTo(125,190);
+      context.lineTo(135,175);
+      context.lineTo(135,150);
+      context.lineTo(200,135);
+      context.lineTo(225,135);
+      context.lineTo(225,175);
+      context.lineTo(235,190);
+      context.lineTo(255,200);
+      context.closePath();
+      context.fill();
+    }
+    function topTree() {
+      context.beginPath();
+      context.fillStyle = "brown";
+      context.moveTo(200,135);
+      context.lineTo(135,120);
+      context.lineTo(135,-50);
+      context.lineTo(225,-50);
+      context.lineTo(225,120);
+      context.closePath();
+      context.fill();
+    }
+    
+    function drawFallingTree() {
+      bottomTree();
+      topTree();
+    }
+    
+    function drawChoppedTree() {
+      var dx = slider.value;
+      
+      bottomTree();
+      context.save();
+      context.translate(200,160);
+      context.rotate((dx-'95')*20*Math.PI/180);
+      context.translate(-200,-160);
+      topTree();
+      context.restore();
+    }
+    
+    function chopTree() {
+      var dx = slider.value;
+      
+      if (dx < 30) {
+        drawFullTree();
+      }
+      else if (dx < 45) {
+        drawPartChoppedTree();
+      }
+      else if (dx < 60) {
+        drawQuarterChoppedTree();
+      }
+      else if (dx < 75) {
+        drawHalfChoppedTree();
+      }
+      else if (dx < 85) {
+        drawAlmostChoppedTree();
+      }
+      else if (dx < 95) {
+        drawFallingTree();
+      }
+      else {
+        drawChoppedTree();
+      }
+    }
+    
+    function swingAxe() {
+      var dx = slider.value;
+      
+      // swing upwards
+      if (swingCount <= 50){
+        canvas.width = canvas.width;
+        chopTree();
+        drawFigure();
+        context.save();
+        context.translate(25,120);
+        context.save();
+        context.translate(dx,0);
+        
+        var i = 0;
+        while (i < swingCount){
+          context.rotate(-0.015*Math.PI);
+          i++
+        }
+        context.translate(-dx,0);
+        context.translate(-40,-110);
+        drawArm();
+        swingCount++;
+        context.restore();
+        context.restore();
+      }
+      // swing downwards
+      else if (swingCount <= 90){
+        canvas.width = canvas.width;
+        chopTree();
+        drawFigure();
+        context.save();
+        context.translate(25,120);
+        context.save();
+        context.translate(dx,0);
+        
+        var j = -20;
+        while (j < swingCount){
+          context.rotate(0.018*Math.PI);  
+          j++;
+        } 
+        
+        context.translate(-dx,0);
+        context.translate(-40,-110);
+        drawArm();
+        swingCount++;
+        context.restore();
+        context.restore();
+      }
+      else {
+        swingCount = 0;
+      }
+      
+      animate = setTimeout(swingAxe,10);
+    }
+    
+    window.onload = slider.addEventListener("input", swingAxe());
+    
+  </script>
+</body>
+</html>

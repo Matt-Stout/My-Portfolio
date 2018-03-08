@@ -1,0 +1,302 @@
+﻿html {
+}
+
+body {
+    margin: 0 0 0 0;
+    background-image: url("Images/background-img-2.jpg");
+    background-size: contain;
+    background-repeat: repeat-y;
+    left: 0;
+}
+
+p, li {
+    font-family: 'Calisto MT';
+    font-size: 20px;
+    color: black;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    border-bottom: thick solid rgb(67,92,192); /* blue */
+    background-color: #cbcdcd; /* light grey */
+    z-index: 8;
+}
+
+    header .center {
+        position: relative;
+        height: 100px;
+        top: 0;
+        left: 0
+    }
+
+    header a.logo {
+        position: relative;
+        display: block;
+        float: left;
+        width: 222px;
+        height: 60px;
+        margin: 0 35px 0 0;
+    }
+
+        header a.logo .logo_img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 75px;
+            width: 75px;
+        }
+
+        header a.logo .text1 {
+            position: absolute;
+            left: 150px;
+            top: 0;
+            color: black;
+            font-family: 'Calisto MT';
+        }
+
+        header a.logo .text2 {
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            color: black;
+            font-family: 'Calisto MT';
+        }
+
+section.project-covers {
+    position: relative;
+    top: 100px;
+}
+
+/*
+    Header  ^^^^
+
+    Main    vvvv
+*/
+section.main {
+    margin-top: 100px;
+}
+
+    section.main > div.row > div.about_me > h1 {
+        font-family: 'Calisto MT';
+        color: black;
+    }
+
+section.skills > div.row > div.skills-left {
+    background-color: rgb(0, 196, 107); /* green */
+    height: 400px;
+    margin-right: 0;
+}
+
+    section.skills > div.row > div.skills-left > h4 {
+        font-size: 30px;
+        font-family: 'Calisto MT';
+        color: black;
+        margin-top: 10%;
+    }
+
+    section.skills > div.row > div.skills-left > ul {
+        font-size: 25px;
+        font-family: 'Calisto MT';
+        color: black;
+        margin-top: 30px;
+    }
+
+        section.skills > div.row > div.skills-left > ul > li {
+            margin-top: 10px;
+        }
+
+section.skills > div.row > div.skills-right {
+    background-color: rgb(43, 159, 191); /* light blue */
+    height: 400px;
+}
+
+    section.skills > div.row > div.skills-right > h4 {
+        font-size: 30px;
+        font-family: 'Calisto MT';
+        color: black;
+        margin-top: 7.5%;
+        margin-left: 100px;
+    }
+
+    section.skills > div.row > div.skills-right > ul {
+        font-size: 25px;
+        font-family: 'Calisto MT';
+        color: black;
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+        section.skills > div.row > div.skills-right > ul > li {
+            margin-top: 10px;
+        }
+
+section.skills > div.row > div.pic-right {
+    margin-left: -15px;
+    left: 0;
+    padding-right: 0px;
+}
+
+section.skills > div.row > div.pic-left {
+    padding-right: 0px;
+    /*left: 0;*/
+}
+
+    section.skills > div.row > div.pic-left > img {
+        height: 400px;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+section.skills > div.row > div.pic-right > img {
+    height: 400px;
+    min-width: 100%;
+}
+
+section.skills > div.row-work {
+    background-color: rgb(0, 196, 107); /* green */
+    font-family: 'Calisto MT';
+    color: black;
+}
+
+section.skills > div.two {
+    height: 275px;
+}
+
+section.skills > div.row-work > div.work > h4 {
+    font-size: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+section.skills > div.row-work > div.work > a.link {
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 65px;
+    bottom: 30px;
+}
+
+section.skills > div.row-work > div.work > a.link1 > img {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+section.skills > div.row-work > div.work > a.link2 > img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+section.skills > div.row-work > div.work > a.link3 > img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+section.skills > div.row-work > div.work > a.link4 > img {
+    height: 200px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+section.more {
+}
+
+    section.more > div.row > div.more_about_me > h1 {
+        font-family: 'Calisto MT';
+        color: black;
+        left: 50%;
+    }
+/*
+    Main    ^^^^
+    
+    Footer  vvvv
+*/
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #cbcdcd; /* light grey */
+    border-top: thick solid rgb(67,92,192); /* blue */
+}
+
+nav #menu {
+    float: right;
+    height: 90px;
+}
+
+#menu > ul {
+    height: 50px;
+}
+
+    #menu > ul > li {
+        float: left;
+        margin: 0 50px 0 0;
+        font-family: 'Calisto MT';
+    }
+
+        #menu > ul > li > a {
+            height: 14px;
+            padding: 20px 10px;
+            text-transform: uppercase;
+        }
+
+ul.list {
+    position: fixed;
+    top: 1%;
+    left: 60%;
+    width: 45%;
+    font-family: 'Calisto MT';
+}
+
+    ul.list > li a {
+        position: relative;
+        display: block;
+        color: #2a2a2a;
+        font: normal 14px 'HNBD';
+        line-height: 14px;
+        z-index: 0;
+    }
+
+div.social_media {
+    position: relative;
+    width: 400px;
+    height: 40px;
+    left: 75%;
+    top: 20px;
+}
+
+    div.social_media > a > img {
+        margin-right: 35px;
+    }
+
+        div.social_media > a > img.linkedin_logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        div.social_media > a > img.github_logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        div.social_media > a > img.instagram_logo {
+            width: 35px;
+            height: 35px;
+        }
+
+        div.social_media > a > img.facebook_logo {
+            width: 32.5px;
+            height: 32.5px;
+        }

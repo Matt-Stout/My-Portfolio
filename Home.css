@@ -1,0 +1,152 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.background > div.row > div.background-img {
+    background-image: url(Images/head_shot.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    z-index: -99999;
+    margin: 0;
+    padding: 0;
+    left: -25%;
+    top: 0;
+}
+
+section.buttons {
+    position: fixed;
+    width: 1000px;
+    bottom: 20%;
+    right: 2.5%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+div.projects-button, div.about-button, div.contact-button {
+    opacity: 1;
+}
+
+    div.projects-button > a.backing, div.about-button > a.backing, div.contact-button > a.backing {
+        position: fixed;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        text-decoration: none;
+        text-align: center;
+        opacity: 1;
+        background-color: rgba(49, 49, 49, 0.82); /* dark grey */
+        height: 40px;
+        width: 115px;
+        border: medium solid #d1d1d1; /* light grey */
+        right: 10%;
+    }
+
+    div.projects-button > a.backing {
+        margin-right: 420px;
+    }
+
+    div.about-button > a.backing {
+        margin-right: 220px;
+    }
+
+    div.contact-button > a.backing {
+        margin-right: 20px;
+    }
+
+    div.projects-button > p, div.about-button > p, div.contact-button > p {
+        right: 10%;
+        position: fixed;
+        margin-top: 10px;
+    }
+
+    div.projects-button > p {
+        margin-right: 435px;
+    }
+
+    div.about-button > p {
+        margin-right: 252.5px;
+    }
+
+    div.contact-button > p {
+        margin-right: 42.5px;
+    }
+
+a.text {
+    text-decoration: none;
+    color: #d1d1d1; /* light grey */
+    opacity: 1;
+    font-family: 'Calisto MT';
+}
+
+.title {
+    top: 50%;
+    margin-top: -10%;
+    left: 5%;
+    position: relative;
+    color: white;
+}
+
+#M_Logo {
+    position: fixed;
+    width: 225px;
+    right: 10%;
+    margin-right: 675px;
+    top: 10%;
+}
+
+.name {
+    font-size: 175px;
+    font-family: 'Bodoni MT';
+    color: #d1d1d1; /* light grey */
+    text-shadow: -3px -3px 2px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    right: 10%;
+    top: 10%;
+}
+
+.description {
+    font-size: 35px;
+    font-family: 'Bodoni MT';
+    color: #d1d1d1; /* light grey */
+    text-shadow: -2px -1px 1px rgba(0, 0, 0, 0.75);
+    position: fixed;
+    right: 10.5%;
+    top: 35%;
+}
+
+div.social_media {
+    position: fixed;
+    width: 400px;
+    height: 50px;
+    right: 10%;
+    bottom: 5%;
+}
+
+    div.social_media > a > img {
+        margin-right: 35px;
+    }
+
+        div.social_media > a > img.linkedin_logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        div.social_media > a > img.github_logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        div.social_media > a > img.instagram_logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        div.social_media > a > img.facebook_logo {
+            width: 45px;
+            height: 45px;
+        }

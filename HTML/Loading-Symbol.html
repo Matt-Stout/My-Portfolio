@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <h1>Loading Symbol</h1>
+</head>
+<body>
+  <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;"></canvas>
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+    var count = 0;
+    
+    function init() {
+      face();
+      rotateLine();
+    }
+    
+    function face(){
+      context.beginPath();
+      context.arc(100,100,100,0,2*Math.PI);
+      context.fillStyle = "white";
+      context.stroke();
+      context.save();
+    }
+    
+    function drawLine() {
+      
+      context.beginPath();
+      context.rect(100,100,1,75);
+      context.fillStyle = "black";
+      context.fill();
+    }
+    
+    function rotateLine() {
+      count++;
+      if (count <= 60) {
+        context.save();
+        context.translate(canvas.width/2,canvas.height/2);
+        context.rotate(6*Math.PI/180 );  
+        context.translate(-canvas.width/2,-canvas.height/2);
+        drawLine();
+      }
+      else if (count <= 120) {
+        context.save();
+        context.clearRect(99,101,3,75);
+        context.translate(canvas.width/2,canvas.height/2);
+        context.rotate(6*Math.PI/180 );  
+        context.translate(-canvas.width/2,-canvas.height/2);
+        drawLine();
+      }
+      else {
+        count = 0;
+      }
+      animate = setTimeout(rotateLine,50);
+    }
+    
+    window.onload = init();
+  </script>
+</body>
+</html>
