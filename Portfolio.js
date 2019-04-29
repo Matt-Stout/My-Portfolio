@@ -158,6 +158,26 @@ function outFunction16() {
     mask16.style.opacity = 0;
 }
 
+function overFunction17() {
+    overlay17.style.opacity = 0.4;
+    mask17.style.opacity = 1;
+}
+
+function outFunction17() {
+    overlay17.style.opacity = 1;
+    mask17.style.opacity = 0;
+}
+
+function overFunction18() {
+    overlay18.style.opacity = 0.4;
+    mask18.style.opacity = 1;
+}
+
+function outFunction18() {
+    overlay18.style.opacity = 1;
+    mask18.style.opacity = 0;
+}
+
 var overlay1 = document.getElementById("overlay1");
 var mask1 = document.getElementById("mask1");
 var overlay2 = document.getElementById("overlay2");
@@ -190,6 +210,10 @@ var overlay15 = document.getElementById("overlay15");
 var mask15 = document.getElementById("mask15");
 var overlay16 = document.getElementById("overlay16");
 var mask16 = document.getElementById("mask16");
+var overlay17 = document.getElementById("overlay17");
+var mask17 = document.getElementById("mask17");
+var overlay18 = document.getElementById("overlay18");
+var mask18 = document.getElementById("mask18");
 
 overlay1.addEventListener("mouseover", overFunction1);
 overlay1.addEventListener("mouseout", outFunction1);
@@ -254,3 +278,11 @@ mask15.addEventListener("mouseover", overFunction15);
 overlay16.addEventListener("mouseover", overFunction16);
 overlay16.addEventListener("mouseout", outFunction16);
 mask16.addEventListener("mouseover", overFunction16);
+
+overlay17.addEventListener("mouseover", overFunction17);
+overlay17.addEventListener("mouseout", outFunction17);
+mask17.addEventListener("mouseover", overFunction17);
+
+overlay18.addEventListener("mouseover", overFunction18);
+overlay18.addEventListener("mouseout", outFunction18);
+mask18.addEventListener("mouseover", overFunction18);
